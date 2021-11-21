@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-09 08:13:31 PM"/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLUsyOEFIMU07MjAyMS0xMC0wODswNzo1MDo1NSBQTTsyNzIy"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLUsyOEFIMU07MjAyMS0xMC0wODsxMDowNDowNSBQTTsxOzI4MTg="/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLUlFUDZVSU47MjAyMS0xMC0wOTswODoxMzozMSBQTTsyOzI4OTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="q" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Jumlah Rumah Griya Asri: &quot;" newline="True"/>
+            <input variable="q"/>
+            <declare name="r" type="String" array="True" size="q"/>
+            <declare name="s" type="String" array="True" size="q"/>
+            <declare name="t" type="String" array="True" size="q"/>
+            <declare name="u" type="String" array="True" size="q"/>
+            <if expression="q%2==0">
+                <then>
+                    <for variable="i" start="0" end="q-1" direction="inc" step="1">
+                        <output expression="&quot;Masukan Nama Pemilik Rumah: &quot;" newline="True"/>
+                        <input variable="r[i]"/>
+                        <output expression="&quot;Masukan Alamat Pemilik Rumah : &quot;" newline="True"/>
+                        <input variable="s[i]"/>
+                    </for>
+                </then>
+                <else>
+                    <for variable="i" start="0" end="q-1" direction="inc" step="1">
+                        <output expression="&quot;Masukan Nama Pemilik Rumah: &quot;" newline="True"/>
+                        <input variable="r[i]"/>
+                        <output expression="&quot;Masukan Alamat Pemilik Rumah: &quot;" newline="True"/>
+                        <input variable="s[i]"/>
+                    </for>
+                </else>
+            </if>
+            <for variable="i" start="0" end="1-1" direction="inc" step="1">
+                <output expression="&quot;Masukan Nama Pemilik Rumah yang ingin dicek: &quot;" newline="True"/>
+                <input variable="t[i]"/>
+                <output expression="&quot;Masukan Alamat Pemilik Rumah yang ingin dicek: &quot;" newline="True"/>
+                <input variable="u[i]"/>
+            </for>
+            <if expression="q%2==0">
+                <then>
+                    <if expression="t[0]==r[0] &amp;&amp; u[0]==s[0] || t[0]==r[1] &amp;&amp; u[0]== s[1]">
+                        <then>
+                            <output expression="&quot;Rumah ditemukan&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Rumah Tidak ditemukan&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="q%2!=0">
+                        <then>
+                            <if expression="t[0]==r[0] &amp;&amp; u[0]==s[0] || t[0]==r[1] &amp;&amp; u[0]== s[1] || t[0]==r[2] &amp;&amp; u[0]==s[2]">
+                                <then>
+                                    <output expression="&quot;Rumah ditemukan &quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Rumah tidak ditemukan&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;Rumah tidak ditemukan&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
